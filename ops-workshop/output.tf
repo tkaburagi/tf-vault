@@ -15,3 +15,11 @@ output "enabled-auth-method" {
     vault_auth_backend.userpass.type
   ]
 }
+
+
+output "policy-list" {
+  value = [
+    vault_policy.read-all.name,
+    vault_policy.read-secret-1.name
+  ]
+}
